@@ -51,7 +51,7 @@ export default function App() {
   };
 
   return (
-    <div className="container h-screen bg-bg">
+    <div className="bg-bg min-h-screen">
       <div>
         
         {currentScreen === "welcome" && (
@@ -60,11 +60,12 @@ export default function App() {
         
         {currentScreen === "input" && (
           <>
-          <div className="flex justify-between w-full">
-            <img src="./holly_deco.svg" alt="" />
-            <img src="./holly_deco.svg" alt="" className="transform scale-x-[-1]" />
+          <div className="w-full min-h-screen px-2 py-4 justify-between text-center space-y-6 text-cream flex flex-col items-center">
+            <div className="flex justify-between w-full">
+              <img src="./holly_deco.svg" alt="" />
+              <img src="./holly_deco.svg" alt="" className="transform scale-x-[-1]" />
             </div>
-            <h2 className="text-2xl font-bold mb-6 text-center">
+            <h2 className="text-5xl text-center font-heading absolute w-3/4 top-20">
               Ajoutez les participants
             </h2>
             <ParticipantInput
@@ -73,7 +74,7 @@ export default function App() {
               onRemoveParticipant={removeParticipant}
             />
             <div className="mt-6">
-              <button className="button w-full" onClick={distributeGifts}>
+              <button className="button w-64 leading-5 text-lg px-8 py-2 font-body font-bold bg-red rounded-full text-cream uppercase" onClick={distributeGifts}>
                 Distribuer les cadeaux
               </button>
             </div>
@@ -81,19 +82,32 @@ export default function App() {
               <img src="./holly_deco.svg" alt=""  className="transform scale-y-[-1]"/>
               <img src="./holly_deco.svg" alt=""  className="transform scale-y-[-1] transform scale-x-[-1]"/>
             </div>
+          </div>
+          
           </>
         )}
         {currentScreen === "assignments" && (
           <>
-            <h2 className="text-2xl font-bold mb-6 text-center">
-              Attributions des cadeaux
-            </h2>
-            <AssignmentDisplay assignments={assignments} />
-            <div className="mt-6">
-              <button className="button w-full" onClick={resetApp}>
-                Recommencer
-              </button>
-            </div>
+          <div className="w-full min-h-screen px-2 py-4 justify-between text-center space-y-6 text-cream flex flex-col items-center">
+              <div className="flex justify-between w-full mb-20">
+                  <img src="./holly_deco.svg" alt="" />
+                  <img src="./holly_deco.svg" alt="" className="transform scale-x-[-1]" />
+                </div>
+                <h2 className="text-5xl text-center font-heading absolute w-3/4 top-24">
+                  Attributions des cadeaux
+                </h2>
+                <AssignmentDisplay assignments={assignments} />
+                <div className="mt-6">
+                  <button className="button w-64 leading-5 text-lg px-8 py-2 font-body font-bold bg-red rounded-full text-cream uppercase" onClick={resetApp}>
+                    Recommencer
+                  </button>
+                </div>
+                <div className="flex justify-between w-full">
+                  <img src="./holly_deco.svg" alt=""  className="transform scale-y-[-1]"/>
+                  <img src="./holly_deco.svg" alt=""  className="transform scale-y-[-1] transform scale-x-[-1]"/>
+                </div>
+          </div>
+          
           </>
         )}
       </div>

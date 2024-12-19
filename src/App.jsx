@@ -51,7 +51,7 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto h-screen p-4 bg-[var(--color-bg)]">
+    <div className="container h-screen p-4 bg-[var(--color-bg)]">
       <div>
         
         {currentScreen === "welcome" && (

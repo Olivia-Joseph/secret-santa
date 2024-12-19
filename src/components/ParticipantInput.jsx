@@ -23,7 +23,8 @@ export function ParticipantInput({
   };
 
   return (
-    <div className="space-y-4">
+    <div className=" w-full h-screen px-2 py-4  text-center space-y-6 text-cream flex flex-col items-center">
+
       // Champs de saisie pour ajouter un participant
       <div className="flex space-x-2">
         <input
@@ -54,6 +55,10 @@ export function ParticipantInput({
           </li>
         ))}
       </ul>
+      
+      
     </div>
+
+    
   );
 }

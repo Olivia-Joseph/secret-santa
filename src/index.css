@@ -1,21 +1,25 @@
 @import 'tailwindcss';
 
-@font-face {
-  font-family: 'Alex Brush';
-  src: url('/fonts/AlexBrush-Regular.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
+
+
+@layer base {
+  /* @font-face {
+    font-family:'christmas';
+    src: url('/fonts/AlexBrush-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  } 
+  
+  /* @font-face {
+    font-family: 'Tinos';
+    src: url('/fonts/Tinos-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }*/ 
 }
 
-@font-face {
-  font-family: 'Tinos';
-  src: url('/fonts/Tinos-Regular.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-:root {
-  --font-heading: 'Alex_Brush', cursive;
+@theme {
+  --font-heading: "Alex Brush", serif;
   --font-body: 'Tinos', serif;
 
   --color-bg: #192E2F;
@@ -23,8 +27,4 @@
   --color-red: #913025;
   --color-gold: #BC8F59;
   --color-cream: #F2D496;
-}
-
-@layer base {
-  
 }

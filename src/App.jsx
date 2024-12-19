@@ -51,7 +51,7 @@ export default function App() {
   };
 
   return (
-    <div className="container h-screen p-4 bg-[var(--color-bg)]">
+    <div className="container h-screen bg-bg">
       <div>
         
         {currentScreen === "welcome" && (
@@ -60,6 +60,10 @@ export default function App() {
         
         {currentScreen === "input" && (
           <>
+          <div className="flex justify-between w-full">
+            <img src="./holly_deco.svg" alt="" />
+            <img src="./holly_deco.svg" alt="" className="transform scale-x-[-1]" />
+            </div>
             <h2 className="text-2xl font-bold mb-6 text-center">
               Ajoutez les participants
             </h2>
@@ -72,6 +76,10 @@ export default function App() {
               <button className="button w-full" onClick={distributeGifts}>
                 Distribuer les cadeaux
               </button>
+            </div>
+            <div className="flex justify-between w-full">
+              <img src="./holly_deco.svg" alt=""  className="transform scale-y-[-1]"/>
+              <img src="./holly_deco.svg" alt=""  className="transform scale-y-[-1] transform scale-x-[-1]"/>
             </div>
           </>
         )}

@@ -3,25 +3,26 @@
 
 export function WelcomeScreen({ onStart }) {
   return (
-    <div className="text-center space-y-6 text-[var(--color-cream)]">
-      <div className="flex justify-between">
+    <div className=" w-full h-screen px-2 py-4  text-center space-y-6 text-cream flex flex-col justify-between items-center">
+      <div className="flex justify-between w-full">
       <img src="./holly_deco.svg" alt="" />
-      <img src="./holly_deco.svg" alt="" />
+      <img src="./holly_deco.svg" alt="" className="transform scale-x-[-1]" />
       </div>
-      
-      <h1 className="text-4xl font-['Alex_Brush'] ">Secret Santa</h1>
-      <p className="text-lg ">
-        Bienvenue dans l'application Secret Santa ! Organisez facilement votre
-        échange de cadeaux entre amis ou collègues.
-      </p>
 
-      
-      <button onClick={onStart} className="button text-lg px-8 py-2 font-['Tinos'] bg-[var(--color-red)] rounded-full text-[var(--color-cream)]">
+      <div className="relative">
+        <h1 className="text-5xl font-heading absolute top-11 left-17 -rotate-12">Secret</h1>
+        <img src="./Santa.svg" alt="" />
+        <button onClick={onStart} className="button text-lg px-8 py-2 font-body font-bold bg-red rounded-full text-cream">
         COMMENCER
       </button>
-      <div className="flex justify-between">
-      <img src="./holly_deco.svg" alt="" />
-      <img src="./holly_deco.svg" alt="" />
+      </div>
+      
+
+      
+      
+      <div className="flex justify-between w-full">
+      <img src="./holly_deco.svg" alt=""  className="transform scale-y-[-1]"/>
+      <img src="./holly_deco.svg" alt=""  className="transform scale-y-[-1] transform scale-x-[-1]"/>
       </div>
     </div>
   );
